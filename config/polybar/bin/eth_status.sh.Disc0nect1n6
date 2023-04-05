@@ -1,0 +1,15 @@
+#!/bin/bash
+
+IFACE=$(/usr/sbin/ifconfig | grep "wlan0"| awk '{print $1}' | tr -d ':')
+IP=$(/usr/sbin/ifconfig |  grep "wlan" -A1 | grep inet | awk '{print $2}'| awk '{print $1}' FS=.)
+
+
+if [ "$IP" = "192" ]; then
+	echo "%{T3}%{F#bbe0ff}  %{T3} %{T3}%{F#8FBAF3}$(echo $(ip a | grep "wlan0" | awk '{print $2}' |grep -v "wl" | grep -v "wlan0" | awk '{print $1}' FS=/;) )"
+fi
+
+if [ "$IFACE" = "wlan0" ]; then
+	echo "%{T3}%{F#bbe0ff} %{u-}%{T3}%{F#bbe0ff}  %{F#218889} Conecting ..."
+else
+	echo "%{T3}%{F#bbe0ff} %{u-}%{T3}%{F#bbe0ff}  %{F#218889} Disconected"
+fi

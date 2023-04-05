@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[en_GB]=
+Comment=
+Exec=/home/ch0p1n0/.config/polybar/pl45M4-p@ly.sh
+GenericName[en_GB]=Pentest polybar
+GenericName=Pentest polybar
+Icon=dialog-scripts
+MimeType=application/x-shellscript;
+Name[en_GB]=pl45M4-p@ly.sh
+Name=pl45M4-p@ly.sh
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-KDE-AutostartScript=true
+X-KDE-RunOnDiscreteGpu=false
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,0 +1,149 @@
+configuration {
+	font:				"Iosevka Extralight 10";
+	show-icons:			true;
+	icon-theme:			"WhiteSur-dark";
+	display-drun:			"";
+	drun-display-format:		"{icon} {name}";
+	disable-history:		false;
+	sidebar-mode:			false;
+	click-to-exit:			true;
+	location:			6;
+	modi:	                        [window,run,ssh,drun];
+}
+
+* {
+	BG:				#10121399;
+	BGA:				#101213;
+	FG:				#edeff0ff;
+	UGT:				#df5b61ff;
+	VR:				#c21024;
+	BlueClear:			#0bd67e;
+	purple:				#7a0785;
+	veryGreen:			#4af40b;
+	softGreen:			#0bf441;
+	ligthBlue:			#0bf4b5;
+}
+
+window {
+	transparency:			"real";
+	background-color:		@BG;
+	text-color:			@FG;
+	border-radius:			1.5%;
+	width:				40%;
+	x-offset:			0%;
+	y-offset:			-6%;
+}
+
+prompt {
+	enabled:                        true;
+	background-color:               @BG;
+	text-color:                     @FG;
+}
+
+textbox-prompt-colon {
+	expand:				false;
+	str:				"";
+	background-color:		@BGA;
+	text-color:			@VR;
+	paccing:			0.3% 0 0 0.6%;
+	font:				"Iosevka Term Thin 40";
+}
+
+entry {
+	background-color:		@BGA;
+	text-color:                     @ligthBlue;
+	placeholder-color:              @veryGreen;
+	expand:                         true;
+	horizontal-align:               0;
+	placeholder:                    "Tell your mother you LOVE her sometimes ..";
+	font:                           "Iosevka Term Light Italic 12";
+	blink:                          true;
+	padding:                        0.8%;
+}
+
+inputbar {
+	children:                       [ textbox-prompt-colon, entry ];
+	spacing:                        0px;
+	background-color:               @BGA;
+	text-color:                     @FG;
+	expand:                         false;
+	border-radius:                  2px;
+	position:                       center;
+}
+
+case-indicator {
+	background-color:		@BG;
+	text-color:			@FG;
+	spacing:			0;
+}
+
+
+listview {
+	background-color:               #00000000;
+	columns:                        4;
+	lines:                          3;
+	spacing:			0.3%;
+	cycle:				false;
+	dynamic:			true;
+	layout:				vertical;
+}
+
+mainbox {
+	background-color:		@BG;
+	children:			[ inputbar, listview ];
+	spacing:			2%;
+	padding:			1%;
+}
+
+element {
+	background-color:		#00000000;
+	text-color:			@softGreen;
+	orientation:			vertical;
+	border-radius:			0.1%;
+	padding:			0.1%;
+}
+
+element-icon {
+	background-color:		inherit;
+	text-color:			inherit;
+	horizontal-align:		0.5;
+	vertical-align:			0.5;
+	size:				6%;
+}
+
+element-text {
+	background-color:		inherit;
+	text-color:			inherit;
+	expand:				true;
+	horizontal-align:		0.5;
+	vertical-align:			0.5;
+}
+
+element normal.urgent,
+element alternate.urgent {
+	background-color:		@UGT;
+	text-color:			@FG;
+	border-radius:			0.5%;
+}
+
+element normal.active,
+element alternate.active {
+	background-color:		@BGA;
+	text-color:			@FG;
+}
+
+element selected {
+	background-color:		@BGA;
+	text-color:			@FG;
+	border-radius:			0.4%;
+}
+
+element selected.urgent {
+	background-color:		@UGT;
+	text-color:			@FG;
+}
+
+element selected.active {
+	background-color:		@BGA;
+	color:                          @FG;
+}
