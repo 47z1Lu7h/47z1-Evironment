@@ -98,7 +98,7 @@ def main():
     os.system("sudo rm -rf ~/.config/bspwm ~/.config/sxhkd/ ~/.config/picom ~/.config/polybar ~/.config/rofi ")
     os.system("cp -r config/* ~/.config/")
     os.system("chmod +x ~/.config/bspwm/bspwmrc ~/.config/polybar/pl45M4-p@ly.sh ~/.config/polybar/b5PWm-p@ly.sh ~/.config/polybar/bin/* ~/.config/bspwm/scripts/*")
-    os.system("cp misc/.Xresources ~/.Xresources; cp misc/.p10k.zsh ~/.p10k.zsh; sudo cp misc/root.p10k.zsh /root/.p10k.zsh; cp misc/.zshrc ~/.zshrc; sudo ln -s -f $HOME/.zshrc /root;")
+    os.system("cp misc/p10k.zsh ~/.p10k.zsh; sudo cp misc/root.p10k.zsh /root/.p10k.zsh; cp misc/zshrc ~/.zshrc; sudo ln -s -f $HOME/.zshrc /root;")
     os.system("sudo cp -r misc/usrShare/* /usr/share/; sudo cp -r misc/fonts/* /usr/share/fonts; sleep 2; fc-cache -v; sudo sed -i 's/bash/zsh/g' /etc/passwd; sleep 2; sudo cp -r config/bspwm/p1C5 /usr/share/wallpapers/")
 
 	# Visual Studio Code
