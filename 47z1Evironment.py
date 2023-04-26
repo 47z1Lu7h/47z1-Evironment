@@ -144,17 +144,16 @@ def nvim():
 
 	# KDE Rounded Corners
 def roundC():
-    mag()
-    print("\n\t[+] Installing KDE-Rounded-Corners \n")
-    blue()
-    os.system("mkdir ~/d35kT@p/r3p0s; cd ~/d35kT@p/r3p0s")
-    os.system("git clone https://github.com/matinlotfali/KDE-Rounded-Corners")
-    time.sleep(2)
-    os.system("cd KDE-Rounded-Corners; mkdir build; cd build; cmake ..; sleep 2; make; sudo make install")
-    time.sleep(2)
-    os.system("kwin --replace & disown")
-    time.sleep(2)
-    os.system("sudo apt-get install --reinstall plasma-widgets-addons -y && git clone https://github.com/prateekmedia/Menu11.git ~/.local/share/plasma/plasmoids/menu11; kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell;")
+	mag()
+	print("\n\t[+] Yepa yepale!\n")
+	blue()
+	os.system("sudo apt install git cmake g++ gettext extra-cmake-modules qttools5-dev libqt5x11extras5-dev libkf5configwidgets-dev libkf5globalaccel-dev libkf5notifications-dev kwin-dev -y; sleep 2")
+	mag()
+	os.system('git clone https://github.com/matinlotfali/KDE-Rounded-Corners; sleep 2')
+	blue()
+	os.system("cd KDE-Rounded-Corners; mkdir build; cd build; cmake ..; sleep 2; make; sudo make install; sleep 2; rm -rf ../../KDE-Rounded-Corners; sleep 2")
+	mag()
+	os.system("sudo apt-get install --reinstall plasma-widgets-addons -y && git clone https://github.com/prateekmedia/Menu11.git ~/.local/share/plasma/plasmoids/menu11; kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell && kwin --replace  & disown ")
 
 	# Nice t@@L! ;D
 def htbXplorer():
